@@ -1,0 +1,120 @@
+{% extends 'new_word/index.html' %}
+{% load static %}
+
+{% block title %}configuration{% endblock title %}
+
+{% block content %}
+
+
+
+<body class="contact-area">
+   <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <section class="navbar-area">
+            
+              
+                <div class="pricing-btn rounded-buttons text-center">
+                            <a class="main-btn rounded-one" href=" {% url 'user_interface' %}">Stop the game</a>
+                        </div>
+           
+     
+    </section>
+
+ <section id="contact" class="contact-area">
+        <div class="container">
+           
+           
+          
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="contact-wrapper form-style-two pt-115">
+                        <h4 class="contact-title pb-10"> Choice of letter :<span>You have to choose a letter and guess in as much time as possible the words starting with the letter you have chosen</span></h4>
+                        
+                        <form action="{% url 'config' %}" method="post">
+                        {% csrf_token %}
+                            <div class="row">
+                              
+                              
+                                <div class="col-md-12">
+                                    <div class="form-input mt-25">
+                                        <label><h3>Letter</h3> :</label>
+                                        <div class="input-items default">
+                                        <select class="form-select" name="lettre" required>
+                                            <option></option>
+                                            <option value="a">a</option>
+                                            <option value="b">b</option>
+                                            <option value="c"> c</option>
+                                            <option value="d">d</option>
+                                            <option value="e">e</option>
+                                            <option value="f">f</option>
+                                            <option value="g">g</option>
+                                            <option value="h">h</option>
+                                            <option value="i">i</option>
+                                            <option value="j">j</option>
+                                            <option value="k">k</option>
+                                            <option value="l">l</option>
+                                            <option value="m">m</option>
+                                            <option value="n">n</option>
+                                            <option value="o">o</option>
+                                            <option value="p">p</option>
+                                            <option value="q">q</option>
+                                            <option value="r">r</option>
+                                            <option value="s"> s</option>
+                                            <option value="t">t</option>
+                                            <option value="u">u</option>
+                                            <option value="v">v</option>
+                                            <option value="w">w</option>
+                                            <option value="x">x</option>
+                                            <option value="y">y</option>
+                                            <option value="z">z</option>
+                                         </select>
+                                        </div>
+                                    </div> <!-- form input -->
+                                </div>
+                               
+                                <div class="col-md-12">
+                                    <div class="form-input light-rounded-buttons mt-30">
+                                        <button type="submit" class="main-btn light-rounded-two">Playing with this letter</button>
+                                    </div> <!-- form input -->
+                                </div>
+                            </div> <!-- row -->
+                        </form>
+                    </div> <!-- contact wrapper form -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+
+
+  
+
+   
+
+    <!--====== FOOTER PART ENDS ======-->
+    
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->    
+
+
+
+{% endblock %}

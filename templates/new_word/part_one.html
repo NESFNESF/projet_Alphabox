@@ -1,0 +1,160 @@
+{% extends 'new_word/index.html' %}
+{% load static %}
+
+
+{% block title %}configuration{% endblock title %}
+
+{% block content %}
+
+
+
+<body class="contact-area">
+  
+
+     <section class="navbar-area">
+            
+              
+                <div class="pricing-btn rounded-buttons text-center">
+                            <a class="main-btn rounded-one" href="  {% url 'user_interface' %}  ">Stop the game</a>
+                        </div>
+           
+     
+    </section>
+
+
+
+
+ <section id="pricing" class="pricing-area ">
+       
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-10">
+                    <div class="section-title text-center pb-25">
+                        <h2 class="title"><span class="text-success">LEARN  NEW WORDS   </span> </h2>
+                        <p class="text">Enter French words beginning with the letter "   {{ lettre }}  " .</p>
+                        <p>To win the game you must have at least 100 points </p>
+                        <h3><strong><u>Exemple</u> :</strong> {% for exem in exemple %} {{  exem  }}, {% endfor %}...</h3>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+{% if dif <= 3 %}
+           <div class="row justify-content-center">
+    
+    
+      <form action="{% url 'part_one' %}" method="post">
+                        {% csrf_token %}
+       
+                   
+              
+                            <div class="row">
+                              
+                               <div class="form-input mt-25">
+                                        <label>Entrez un mot :</label>
+                                        <div class="input-items default">
+                                            <input id="mot" name="mot" type="text" autocomplete="off">
+                                            
+                           
+               
+
+                                        </div>
+                                    <h4 class="title"><span class="{{ tex }}" >{{ texts }} </span> </h4>
+                                    </div>
+                               
+                                <div class="col-md-12">
+                                    <div class="form-input light-rounded-buttons mt-30">
+                                        <button id="bout" class="main-btn light-rounded-two" >Valider le mot</button>
+                                    </div> <!-- form input -->
+                                </div>
+                            </div> <!-- row -->
+                  </form>
+                    </div>
+    
+    
+    {% endif %}
+   
+
+</section>
+
+ {% if dif >= 3 %}
+ <section id="contact" class="contact-area">
+        <div class="container">
+           
+           
+         <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-7 col-sm-9">
+                    <div class="pricing-style mt-30">
+                    
+                        <div class="pricing-header text-center">
+                            <h2 class="sub-title">words found</h2>
+                            {% for mot in list_mots %}
+                            <h3 class="month"><strong>{{mot}}</strong> </h3>
+                            
+                            {% endfor %}
+                                 
+                           
+   
+                        </div>
+                        
+                          
+                    </div> <!-- pricing style one -->
+                </div>
+                
+                <div class="col-lg-4 col-md-7 col-sm-9">
+                   
+                      
+                      
+                </div>
+                
+             
+                 <div class="col-lg-5 col-md-7 col-sm-9">
+                    <div class="pricing-style mt-30">
+                      
+                        <div class="pricing-header text-center">
+                            <h1 class="sub-title">Global statistics</h1>
+                             <p id="frappe" class="month"><strong>Number of words entered</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">{{coun}}</span></p>
+                            <p id="reussite" class="month"><strong>Number of words found</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">{{succ}}</span></p>
+                             <p id="score" class="month"><strong>Score</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">{{score}}</span></p>
+
+                       
+
+                                   {% if score > 450 %}
+                          <p id="verdic" class="month"><strong>Verdic</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">Good ! :-) </span></p>
+                 
+                          {% else %}
+                          <p id="verdic" class="month"><strong>Verdic</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">Bad ! :-(</span></p>
+                 
+                          {% endif %}
+
+                       
+                               </div>
+                        </div> <!-- pricing style one -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+ {% endif %}
+
+  
+
+   
+
+    <!--====== FOOTER PART ENDS ======-->
+    
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->    
+
+<script>
+
+
+
+
+</script>
+
+
+
+
+
+{% endblock %}

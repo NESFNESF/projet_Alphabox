@@ -1,0 +1,292 @@
+{% extends 'new_word/index.html' %}
+{% load static %}
+
+{% block title %}INTERFACE UTILISATEUR{% endblock title %}
+
+{% block content %}
+
+<body>
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                       <div class="navbar-brand">
+                        <a  href="#">
+                        
+                          
+                        </a>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                <li class="nav-item active"><a class="page-scroll" href="#home">Dashboard</a></li>
+                                <li class="nav-item"><a class="page-scroll" href="{% url 'menu_one' %}">Learn new words</a></li>
+                                <li class="nav-item"><a class="page-scroll" href="#">Learn the meaning of the words</a> </li>
+                                <li class="nav-item"><a class="page-scroll" href="#">Using words in sentences</a></li>
+                                <li class="nav-item"><a class="page-scroll" href="#">Logout</a></li>
+                               
+                            </ul>
+                        </div>
+                    
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    
+    <!--====== SLIDER PART START ======-->
+
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide" data-ride="carousel">
+         
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">Goal of AlphaBox ?</h1>
+                                    <p class="text">Learning a new language is not an easy task. Knowing that it is not easy, we
+have designed the AlphaBox game which is suitable for each individual learner. It helps players to
+create a learning environment that has just the right level of challenge, in order to stay motivated
+and progress more quickly.</p>
+                                 
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+               <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+
+
+              
+            </div>
+
+         
+        </div>
+    </section>
+
+
+
+
+
+      <section id="pricing" class="pricing-area ">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-10">
+                    <div class="section-title text-center pb-25">
+                        <h3 class="title">Your statistics</h3>
+                        <p class="text">The human mind is not able to retain more than ten numerical values so the man and the woman in their "small heads" must have recourse to external aids which are the statistics</p>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-12 col-md-7 col-sm-9">
+                    <div class="pricing-style mt-30">
+                        <div class="pricing-icon text-center">
+                            <img src="{% static 'assets/images/basic.svg' %}  " alt="">
+                        </div>
+                        <div class="pricing-header text-center">
+                            <h5 class="sub-title">Learn new words</h5>
+                            <p class="month"><strong>Level</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">1</span></p>
+                            <p class="month"><strong>evolution</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">0%</span></p>
+                            <p class="month"><strong>party to play</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">2</span></p>
+                             <p class="month"><strong>games won</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">1</span></p>
+                          <p class="month"><strong>lost games</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">1</span></p>
+                         
+                             <p class="month"><strong>number of words encountered</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">1345</span></p>
+                   <p class="month"><strong>number of words learned</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">345</span></p>
+                   <p class="month"><strong>percentage of words learned</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">12.5%</span></p>
+                 
+                        </div>
+                        
+                          
+                    </div> <!-- pricing style one -->
+                </div>
+                
+                <div class="col-lg-12 col-md-7 col-sm-9">
+                    <div class="pricing-style mt-30">
+                        <div class="pricing-icon text-center">
+                            <img src="{% static 'assets/images/pro.svg' %}  " alt="">
+                        </div>
+                        <div class="pricing-header text-center">
+                            <h5 class="sub-title">Learn the meaning of the words</h5>
+                          <p class="month"><strong>Level</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">1</span></p>
+                            <p class="month"><strong>Evolution</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">0%</span></p>
+                            <p class="month"><strong>Party to play</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">2</span></p>
+                             <p class="month"><strong>Games won</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">1</span></p>
+                          <p class="month"><strong>Lost games</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">1</span></p>
+                        <p class="month"><strong>Number of words encountered</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">1345</span></p>
+                   <p class="month"><strong>Number of words learned</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">345</span></p>
+                   <p class="month"><strong>Percentage of words learned</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">12.5%</span></p>
+                 
+                        </div>
+                     
+                      
+                    </div> <!-- pricing style one -->
+                </div>
+                
+                <div class="col-lg-12 col-md-7 col-sm-9">
+                    <div class="pricing-style mt-30">
+                        <div class="pricing-icon text-center">
+                            <img src="{% static 'assets/images/enterprise.svg' %}  " alt="">
+                        </div>
+                        <div class="pricing-header text-center">
+                            <h5 class="sub-title">Using words in sentences</h5>
+                           <p class="month"><strong>Level</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">1</span></p>
+                            <p class="month"><strong>Evolution</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">0%</span></p>
+                            <p class="month"><strong>Party to play</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">2</span></p>
+                             <p class="month"><strong>Games won</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">1</span></p>
+                          <p class="month"><strong>Lost games</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">1</span></p>
+                     
+                               </div>
+                        </div> <!-- pricing style one -->
+                </div>
+
+                 <div class="col-lg-12 col-md-7 col-sm-9">
+                    <div class="pricing-style mt-30">
+                      
+                        <div class="pricing-header text-center">
+                            <h1 class="sub-title">Global statistics</h1>
+                             <p class="month"><strong>Gobal evolution</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">0%</span></p>
+                            <p class="month"><strong>Party to play</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">2</span></p>
+                             <p class="month"><strong>Games won</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">1</span></p>
+                          <p class="month"><strong>Lost games</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="price">1</span></p>
+                     
+                               </div>
+                        </div> <!-- pricing style one -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== PRINICNG ENDS ======-->
+    
+
+    <!--====== SLIDER PART ENDS ======-->
+    
+    <!--====== FEATRES TWO PART START ======-->
+
+    <section id="services" class="about-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-10">
+                    <div class="section-title text-center pb-10">
+                        <h3 class="title">Your Goals</h3>
+                        <p class="text">The game is subdivided into 3 categories, which in the end will allow you to learn and better understand the French language.</p>
+                    </div> <!-- row -->
+                </div>
+            </div> <!-- row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-12 col-md-7 col-sm-9">
+                    <div class="single-features mt-40">
+                        <div class="features-title-icon d-flex justify-content-between">
+                            <h4 class="features-title"><a href="#">Learn new words</a></h4>
+                              </div>
+                        <div class="features-content">
+                            <p class="text">The first question everyone asks is, how do you quickly memorize new words in a foreign language?
+
+Scientists believe that it is easier to memorize information when it has an emotional charge. Learning words while playing, thanks to rebuses or in films is therefore a good idea. If there's an English song that you love, feel free to look for the meanings of words you don't know. Pairing these words with a song you like will leave an emotional trail in your memory.
+
+The mnemonic is also a very valuable tool. By creating strong associations, you'll more easily remember the words you learn, even those that are difficult to pronounce. There are specialized sites where you can find different mnemonic techniques to help you memorize English words. However, the best way to learn is to create your own associations because these are unique to you and will be emotionally charged..</p>
+                           
+                        </div>
+                    </div> <!-- single features -->
+                </div>
+                <div class="col-lg-12 col-md-7 col-sm-9">
+                    <div class="single-features mt-40">
+                        <div class="features-title-icon d-flex justify-content-between">
+                            <h4 class="features-title"><a href="#">Learn the meaning of the words</a></h4>
+                           
+                        </div>
+                        <div class="features-content">
+                            <p class="text">As an adult, you may feel that learning new words is done quickly, without requiring explicit instruction. However, research results show that learning vocabulary is not so easy for children, especially for those from disadvantaged backgrounds.</p>
+                       
+                        </div>
+                    </div> <!-- single features -->
+                </div>
+                <div class="col-lg-12 col-md-7 col-sm-9">
+                    <div class="single-features mt-40">
+                        <div class="features-title-icon d-flex justify-content-between">
+                            <h4 class="features-title"><a href="#">Using words in sentences</a></h4>
+                          
+                        </div>
+                        <div class="features-content">
+                            <p class="text">This is perhaps one of the most important concepts in this article: spaced repetition. There is no point in repeating a word 10 times in a row to learn vocabulary. It is better to do 10 repetitions (or reviews) spaced in time. Of course, the repetitions depend on each word and its level of difficulty. But this consists, for example, of revising after 10 minutes, then after 8 a.m., after 24 hours, after 3 days, 10 days, 25 days, etc. This technique allows you to store vocabulary in your long-term memory with very little time spent on it. There have been many studies on this.
+It is very important to use the frequency with which words are used when learning vocabulary. Indeed, what is the point of learning words and phrases that are not, or no longer, used? but sometimes present in school books?
+
+If you know the 100 English words on this list, you will understand 50% of the written texts. Well, of course, it's still very limited and I really advise you to go beyond 100 words. But it does show the power of frequency lists. Thanks to information technology, many frequency lists have been created.</p>
+                           
+                        </div>
+                    </div> <!-- single features -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== FEATRES TWO PART ENDS ======-->
+
+    
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="footer-logo text-center">
+                        <a class="mt-30" href="index.html"><img src="{% static 'assets/images/logo.svg' %} " alt="Logo"></a>
+                    </div> <!-- footer logo -->
+                    <ul class="social text-center mt-60">
+                        <li><a href="https://facebook.com/"><i class="lni lni-facebook-filled"></i></a></li>
+                        <li><a href="https://twitter.com/"><i class="lni lni-twitter-original"></i></a></li>
+                        <li><a href="https://instagram.com/"><i class="lni lni-instagram-original"></i></a></li>
+                        <li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
+                    </ul> <!-- social -->
+                    <div class="footer-support text-center">
+                        <span class="number">+8801234567890</span>
+                        
+                    </div>
+                    <div class="copyright text-center mt-35">
+                        <p class="text">Designed by <a href="#" rel="nofollow">Groupe 18</a>  </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== FOOTER PART ENDS ======-->
+    
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+
+
+{% endblock  %}
+
+
